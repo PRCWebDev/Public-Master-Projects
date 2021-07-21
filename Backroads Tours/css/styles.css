@@ -778,8 +778,8 @@ Extra @prcwebdev
 
 @media screen and (max-width: 400px) {
   .hero {
-    min-height: 55vh;
-    align-items: start;
+    min-height: 85vh;
+    align-items: center;
     padding: 1.5rem;
   }
   .hero-banner h1 {
