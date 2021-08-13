@@ -175,6 +175,10 @@ p {
   margin-bottom: 4rem;
   text-align: center;
 }
+
+.bg-grey {
+  background: var(--clr-grey-10);
+}
 /*
 =============== 
 Navbar
@@ -458,14 +462,61 @@ About
     align-self: center;
   }
 }
+
 /*
 =============== 
 Services
 ===============
 */
-/* small screen layout setup */
 /* bg-grey in globals */
+.service {
+  background: var(--clr-white);
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius);
+  text-align: center;
+  transition: var(--transition);
+}
+.service .service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  transition: var(--transition);
+}
+.service p {
+  transition: var(--transition);
+}
+.service:hover {
+  background: var(--clr-primary-5);
+  color: var(--clr-white);
+}
+.service:hover p {
+  color: var(--clr-white);
+}
+.service:hover .underline {
+  background: var(--clr-white);
+}
 
+/* 
+talk about small screen layout setup 
+older phones might not support CSS Grid and that is why is considered best practice to use margins instead for mobile display
+*/
+
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 /*
 =============== 
 Projects
