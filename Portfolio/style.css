@@ -179,6 +179,7 @@ p {
 .bg-grey {
   background: var(--clr-grey-10);
 }
+
 /*
 =============== 
 Navbar
@@ -267,6 +268,7 @@ Navbar
   z-index: 2;
   box-shadow: var(--light-shadow);
 }
+
 /*
 =============== 
 Sidebar
@@ -340,6 +342,7 @@ Sidebar
 .close-btn:hover {
   color: #e66b6b;
 }
+
 /*
 =============== 
 Hero
@@ -517,6 +520,7 @@ older phones might not support CSS Grid and that is why is considered best pract
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
 /*
 =============== 
 Projects
@@ -618,6 +622,7 @@ Projects
     grid-area: d;
   }
 }
+
 /*
 =============== 
 Connect
@@ -701,17 +706,141 @@ Connect
   );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
+
 /*
 =============== 
 Skills
 ===============
 */
+@media screen and (min-width: 768px) {
+  .skills-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.skills {
+  background: var(--clr-primary-9);
+}
+.skills h3 {
+  margin: 1.5rem 0;
+  color: var(--clr-primary-1);
+}
+.skill {
+  margin-bottom: 1.25rem;
+}
+.skill p {
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-1);
+}
+.skill-container {
+  background: var(--clr-white);
+  height: 1rem;
+  width: 100%;
+  border-radius: var(--radius);
+  position: relative;
+}
+.skill-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--clr-primary-5);
+  height: 100%;
+  width: 50%;
+  border-radius: var(--radius);
+  /* display: grid;
+  align-items: center; */
+}
+.value-70 {
+  width: 70%;
+}
+.value-80 {
+  width: 80%;
+}
+.skill-text {
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.skill-text-70 {
+  left: 70%;
+}
+.skill-text-80 {
+  left: 80%;
+}
+
 /*
 =============== 
 Timeline
 ===============
 */
-
+.timeline-center {
+  width: 80vw;
+  max-width: 40rem;
+  /* background: grey; */
+}
+.timeline-item {
+  border-top: 2px dashed var(--clr-primary-5);
+  margin: 0;
+  padding: 4rem 2rem;
+  position: relative;
+  /* we use position: relative; just for the numbers, not for the borders */
+}
+.timeline-item p {
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(even) {
+  /* background: red; */
+  border-left: 2px dashed var(--clr-primary-5);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  /* border-right: 2px dashed var(--clr-primary-5); */
+  margin-right: 2rem;
+  padding-right: 0;
+}
+.timeline-item:nth-child(odd) {
+  border-right: 2px dashed var(--clr-primary-5);
+  /* border-top-right-radius: 2rem; */
+  border-top-right-radius: 30px;
+  /* border-bottom-right-radius: 2rem; */
+  border-bottom-right-radius: 30px;
+  margin-left: 2rem;
+  padding-left: 0;
+  /* text-align: right; */
+}
+.timeline-item:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  /* border-top-left-radius: 0; */
+}
+.timeline-item:last-child {
+  /* border-bottom-right-radius: 0; */
+  border-bottom-left-radius: 0;
+}
+.number {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 0;
+  background: var(--clr-primary-5);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--clr-primary-1);
+  font-weight: bold;
+}
+.timeline-item:nth-child(even) .number {
+  left: 0;
+}
+.timeline-item:nth-child(odd) .number {
+  right: 0;
+  transform: translate(50%, -50%);
+}
 /*
 =============== 
 Blog
