@@ -846,12 +846,140 @@ Timeline
 Blog
 ===============
 */
+.blog {
+  background: var(--clr-grey-10);
+}
+.card {
+  height: 27rem;
+  position: relative;
+  perspective: 1500px;
+  /* perspective = distanta de la care ne uitam la element */
+  /* perspective: 500px; */
+}
+.card-side {
+  /* start of card test */
+  transition: all 2s linear;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100%; */
+  width: 90%;
+  height: 100%;
+  /* end of card test */
+  border-radius: var(--radius);
+  /* visibility: visible; */
+}
+.card-front {
+  /* start of card test */
+  /* background: red; */
+  /* end of card test */
+  background: var(--clr-white);
+  /* transition: all 2s linear; */
+}
+.card-back {
+  /* start of card test */
+  /* background: green; */
+  /* transition: all 2s linear; */
+  transform: rotateY(180deg);
+  /* end of card test */
+  background: var(--clr-primary-10);
+  /* placing the button in the center */
+  display: grid;
+  place-items: center;
+}
+.card:hover .card-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0);
+}
 
+/* rest of the styles */
+.card-info {
+  padding: 1rem 1.5rem;
+}
+.card-front img {
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+}
+.card-footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* added auto for the image bc it already had a height set */
+  align-items: center;
+}
+.card-footer img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card-footer p {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  justify-self: end;
+  color: var(--clr-primary-5);
+  font-size: 0.85rem;
+}
+.blog-center {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 3rem 1rem;
+  /* border: 5px solid pink; */
+  /* background: greenyellow; */
+}
 /*
 =============== 
 Footer
 ===============
 */
+.footer {
+  padding-bottom: 2rem;
+  background: #222;
+  display: grid;
+  place-items: center;
+}
+.footer .social-icons {
+  margin-bottom: 2rem;
+}
+.footer .social-icon {
+  color: var(--clr-primary-5);
+}
+.footer .social-icon:hover {
+  color: var(--clr-primary-10);
+}
+.footer p {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  color: var(--clr-white);
+  text-align: center;
+}
+
+/* extra @prcwebdev */
+footer .prcwebdev {
+  text-transform: none;
+  font-size: 0.8rem;
+}
+footer .prcwebdev a:hover,
+footer .prcwebdev a:visited {
+  color: var(--clr-primary-5);
+  /* emoji cursor from marko denic's blog */
+  /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"),
+    auto; */
+}
+
+/* !!! */
+/* ISSUES / NOT WORKING:
+- Can't place cards in the center of the blog section so i don't have inequal margins
+- Can't adjust: 
+  Adjust Row Height : (card img height) (card info height) (card footer height)   
+  grid-template-rows: auto 1fr auto; 
+so i can place different text without screwing up the display
+*/
+
 /*
 =============== 
 Single Page
