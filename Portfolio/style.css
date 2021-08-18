@@ -612,6 +612,7 @@ Projects
   .project-1 {
     grid-area: b;
   }
+
   .project-2 {
     grid-area: a;
   }
@@ -706,7 +707,11 @@ Connect
   );
   clip-path: polygon(50% 0%, 100% 10%, 100% 90%, 50% 100%, 0 90%, 0 10%);
 }
-
+@media screen and (max-width: 330px) {
+  .connect .video-banner .btn {
+    padding: 0 0.5rem;
+  }
+}
 /*
 =============== 
 Skills
@@ -855,6 +860,9 @@ Blog
   perspective: 1500px;
   /* perspective = distanta de la care ne uitam la element */
   /* perspective: 500px; */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto; */
 }
 .card-side {
   /* start of card test */
@@ -863,8 +871,8 @@ Blog
   position: absolute;
   top: 0;
   left: 0;
-  /* width: 100%; */
-  width: 90%;
+  width: 100%;
+  /* width: 90%; */
   height: 100%;
   /* end of card test */
   border-radius: var(--radius);
@@ -897,7 +905,8 @@ Blog
 
 /* rest of the styles */
 .card-info {
-  padding: 1rem 1.5rem;
+  /* padding: 1rem 1.5rem; */
+  padding: 1rem;
 }
 .card-front img {
   height: 13rem;
@@ -910,6 +919,8 @@ Blog
   grid-template-columns: auto 1fr;
   /* added auto for the image bc it already had a height set */
   align-items: center;
+  /* border: 3px solid red; */
+  /* background: red; */
 }
 .card-footer img {
   width: 2rem;
@@ -928,8 +939,17 @@ Blog
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   gap: 3rem 1rem;
-  /* border: 5px solid pink; */
+  /* border: 3px solid blue; */
   /* background: greenyellow; */
+}
+@media screen and (max-width: 400px) {
+  .card-side {
+    width: 90%;
+  }
+  /* .blog-center {
+    border: 3px solid green;
+    background: wheat;
+  } */
 }
 /*
 =============== 
@@ -966,18 +986,35 @@ footer .prcwebdev {
 footer .prcwebdev a:hover,
 footer .prcwebdev a:visited {
   color: var(--clr-primary-5);
-  /* emoji cursor from marko denic's blog */
+  /* emoji cursor from Marko Denic's blog */
   /* cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"),
     auto; */
 }
 
 /* !!! */
 /* ISSUES / NOT WORKING:
-- Can't place cards in the center of the blog section so i don't have inequal margins
-- Can't adjust: 
-  Adjust Row Height : (card img height) (card info height) (card footer height)   
-  grid-template-rows: auto 1fr auto; 
+
+1) - FIXED! = apparently this was a browser issue that i could fix by simply reopening the project in a new browser window - (Can't place cards in the center of the blog section so i don't have inequal margins)
+
+2)The cards in the Blog section don't display well on very small mobile devices like Iphone 5 / SE
+- Partially Fixed by adding a media query that changes the width of the .card-side from 100% to 90%
+- BUT the cards are not center and i have inequal margins on very small mobile devices like Iphone 5 / SE
+@media screen and (max-width: 400px) {
+  .card-side {
+    width: 90%;  
+}
+
+3)- Can't adjust the Cards Row Height: 
+(card img height) (card info height) (card footer height) with
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;  
+like in the Cards Example from the Grid Mini Projects
 so i can place different text without screwing up the display
+- Partially Fixed by changing the padding on .card-info to 1rem all around, but still not satisfied with the result;
+I have COMMENTED OUT the ISSUES and some of my attempts at fixing them in the index.html and style.css
+
+4) - FIXED! the CONTACT ME button on the Connect section for very small display viewports by changing the padding
 */
 
 /*
