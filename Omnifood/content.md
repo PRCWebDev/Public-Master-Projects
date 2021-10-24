@@ -1,3 +1,5 @@
+<!-- Start of Day 20 #100DaysOfCode -->
+
 # Omnifood
 
 ## About Omnifood
@@ -113,16 +115,54 @@ Email: hello@omnifood.com
 
 Social profiles: instagram, facebook, twitter [links to them not available yet]
 
+<!-- End of Day 20 #100DaysOfCode -->
+
+<!-- Start of Day 21 #100DaysOfCode -->
+
 ### Additional links [links not available yet]
 
 Create account
 Sign in
 iOS app
 Android app
+
 About Omnifood
 For Business
 Cooking partners
 Careers
+
 Recipe directory
 Help center
 Privacy & terms
+
+######
+
+## Sections - initial
+
+1. Hero
+2. Features
+3. How it works
+4. Diets
+5. Meals
+6. CTA
+7. Pricing
+8. Gallery
+9. Testimonials
+10. Featured in (social proof)
+11. Footer (Contact, Sign in, About, Resources)
+
+######
+
+## Sections - final
+
+1. Logo + Navigation
+2. Hero
+3. Featured in (social proof)
+4. How it works
+5. Meals (and list of Diets)
+6. Testimonials + Gallery
+7. Pricing + Features
+8. CTA
+9. Footer (Contact, Sign in, About, Resources)
+
+<!-- End of Day 21 #100DaysOfCode -->
