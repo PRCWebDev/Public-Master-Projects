@@ -1,7 +1,25 @@
 # Public-Master-Projects
 
-Project #1 - Tea Station website - Credit goes to the awesome John Smilga for creating this project in his amazing HTML & CSS Tutorial and Projects Course
+## Practice Project #4 ✅
 
-Project #2 - Backroads Tours website - Credit goes to the awesome John Smilga for creating this project in his amazing HTML & CSS Tutorial and Projects Course
+Omnifood website
 
-Project #3 - Portfolio website - Credit goes to the awesome John Smilga for creating this project in his amazing HTML & CSS Tutorial and Projects Course
+- All credit goes to the awesome Jonas Schmedtmann for creating this Practice Project in his amazing [HTML5, CSS3 and Web Design course](https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/) 🙏 😍 🔥
+
+## Practice Project #3 ✅
+
+Portfolio website
+
+- All credit goes to the awesome John Smilga for creating this Practice Project in his amazing [HTML & CSS Tutorial and Projects Course](https://www.udemy.com/course/in-depth-html-css-course-build-responsive-websites/) 🙏 😍 🔥
+
+## Practice Project #2 ✅
+
+Backroads Tours website
+
+- All credit goes to the awesome John Smilga for creating this Practice Project in his amazing [HTML & CSS Tutorial and Projects Course](https://www.udemy.com/course/in-depth-html-css-course-build-responsive-websites/) 🙏 😍 🔥
+
+## Practice Project #1 ✅
+
+Tea Station website
+
+- All credit goes to the awesome John Smilga for creating this Practice Project in his amazing [HTML & CSS Tutorial and Projects Course](https://www.udemy.com/course/in-depth-html-css-course-build-responsive-websites/) 🙏 😍 🔥
