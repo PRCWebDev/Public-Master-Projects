@@ -151,8 +151,12 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
   /* Building the MOBILE NAVIGATION */
   .btn-mobile-nav {
     display: block;
+
+    /* Making the focus state Visible - *:focus in general.css */
+    z-index: 9999;
   }
 
+  /* Mobile Navigation Overlay Menu */
   .main-nav {
     background-color: rgba(255, 255, 255, 0.97);
     position: absolute;
@@ -160,6 +164,8 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
     left: 0;
     width: 100%;
     height: 100vh;
+
+    /* Moves the Mobile Navigation Overlay Menu horizontally to the right, OUT of the viewport display*/
     transform: translateX(100%);
 
     display: flex;
@@ -168,30 +174,46 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
     transition: all 0.5s ease-in;
 
     /* Hide navigation */
-    /* Allows NO transitions at all */
+    /* Allows NO transitions at all - Transitions and animations DO NOT WORK when we have display set to none because the element is removed from the page's flow */
     /* display: none; */
 
     /* 1) Hide it visually */
     opacity: 0;
+    /* opacity: 0; - hides it visually WITHOUT removing it from the page's normal flow */
 
-    /* 2) Make it unaccessible to mouse and keyboard */
+    /* 2) Make it Unaccessible to mouse and keyboard */
     pointer-events: none;
 
     /* 3) Hide it from screen readers */
     visibility: hidden;
+
+    /* backdrop-filter: blur(10px); blurs the area behind the Mobile Navigation Menu Overlay */
+    -webkit-backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(10px); */
+    backdrop-filter: blur(5px);
+    /* background-color: rgba(255, 255, 255, 0.5); */
   }
 
   .nav-open .main-nav {
+    /* 1) Reveal it visually */
     opacity: 1;
+
+    /* 2) Make it Accessible to mouse and keyboard */
     pointer-events: auto;
+
+    /* 3) Reveal it to screen readers */
     visibility: visible;
+
+    /* Moves the Mobile Navigation Overlay Menu horizontally BACK to the left, IN the viewport display*/
     transform: translateX(0);
   }
 
+  /* Reveals the Mobile Navigation Menu CLOSE X button  */
   .nav-open .icon-mobile-nav[name="close-outline"] {
     display: block;
   }
 
+  /* Hides the Mobile Navigation Menu HAMBURGER button  */
   .nav-open .icon-mobile-nav[name="menu-outline"] {
     display: none;
   }
@@ -207,6 +229,182 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
   }
 }
 /* *** End of Day 34 #100DaysOfCode*** */
+
+/* *** Start of Day 35 #100DaysOfCode*** */
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+/* ! max-width: 44em => 44em * 16px (the defaut font size of the browser) = 704px ! */
+
+@media (max-width: 44em) {
+  /* Transforming all the 3 & 4 columns sections / components into 2 columns */
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+/* ! max-width: 34em => 34em * 16px (the defaut font size of the browser) = 544px ! */
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  /* Transforming all the 2, 3 & 4 columns sections / components into 1 columns */
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 0 3.2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  /* Moving the First image before of the text in the HOW IT WORKS SECTION */
+  /* We are selecting the second child of the <div class="container grid grid--2-cols grid--center-v"> and Moving it to the #1 grid row */
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  /* Moving the Third image before of the text in the HOW IT WORKS SECTION */
+  /* We are selecting the 6th child of the <div class="container grid grid--2-cols grid--center-v"> and Moving it to the #5 grid row */
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  /* Moving the Images closer to their relevant text */
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 3.2rem;
+  }
+
+  /* Giving the cta-img-box a Height in order to make it Visible because it is just an Empty div that has been styled in the style.css with a Background Image, so it had NO Dimensions  */
+  /* Also Moving the Image before of the text and the form in the CALL TO ACTION SECTION */
+  .cta-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
+}
+
+/**************************/
+/* Fixing Safari flexbox gap */
+/**************************/
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
+/* *** End of Day 35 #100DaysOfCode*** */
 
 /* 
 - Font sizes (px)

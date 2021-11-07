@@ -93,6 +93,9 @@
   /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+
+  /* Links to the Absolute Positioned Elements like the Mobile Navigation Overlay Menu */
+  position: relative;
 }
 
 .logo {
@@ -172,6 +175,27 @@
 } */
 /* ***End of Day 34 #100DaysOfCode*** */
 
+/* ***Start of Day 35 #100DaysOfCode*** */
+/* STICKY NAVIGATION */
+.sticky .header {
+  /* the element is taken OUT of the normal flow of the page when using position: fixed, just like when using position: absolute */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+/* ***End of Day 35 #100DaysOfCode*** */
+
 /* ***Start of Day 22 #100DaysOfCode*** */
 /**************************/
 /* HERO SECTION */
@@ -194,7 +218,7 @@
 
 .hero-description {
   font-size: 2rem;
-  line-height: 1.6rem;
+  line-height: 1.6;
   margin-bottom: 4.8rem;
 }
 
@@ -489,26 +513,26 @@
   padding: 9.6rem 0;
 }
 
-.princing-plan {
+.pricing-plan {
   border-radius: 11px;
 
   width: 75%;
 }
 
-.princing-plan--starter {
+.pricing-plan--starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.princing-plan--complete {
+.pricing-plan--complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
 
-.princing-plan--complete::after {
+.pricing-plan--complete::after {
   content: "Best value";
   position: absolute;
   top: 6%;
@@ -757,3 +781,19 @@
   color: #555;
 }
 /* ***End of Day 30 #100DaysOfCode*** */
+
+/* ***Start of Day 35 #100DaysOfCode*** */
+/**************************/
+/* CREDIT SECTION */
+/**************************/
+.container.credit {
+  padding: 1rem;
+  text-align: center;
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+}
+/* ***End of Day 35 #100DaysOfCode*** */

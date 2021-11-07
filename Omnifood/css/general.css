@@ -69,6 +69,12 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+
+  /* Hides all the elements that overflow horizontally, on the X axis */
+  overflow-x: hidden;
+
+  /* Smooth scrolling ONE LINE CSS instead of using JS - DOES NOT WORK ON SAFARI BROWSER - WE NEED TO WRITE JAVASCRIPT FOR SMOOTH SCROOLING ON SAFARI BROWSER */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -76,6 +82,10 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  /* Hides all the elements that overflow horizontally, on the X axis */
+  /* Only works if there is nothing Absolutely Positioned in relation to body */
+  overflow-x: hidden;
 }
 /* ***End of Day 21 #100DaysOfCode*** */
 
