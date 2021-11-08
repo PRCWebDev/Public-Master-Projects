@@ -161,12 +161,31 @@
               </p>
             </div>
           </div>
+
           <div class="hero-img-box">
-            <img
+            <!-- ***Start of Day 36 #100DaysOfCode*** -->
+            <!-- Images Optimization -->
+
+            <!-- Old version -->
+            <!-- <img
               src="./img/hero.png"
               class="hero-img"
               alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            /> -->
+
+            <!-- New and Improved version -->
+            <picture>
+              <source srcset="./img/hero.webp" type="image/webp" />
+              <!-- for Safari browser we must use PNG -->
+              <source srcset="./img/hero-min.png" type="image/png" />
+
+              <!-- Here we need the fallback / backup image in case the browser doesn't recognizes the WEBP newer version -->
+              <img
+                src="./img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+              <!-- ***End of Day 36 #100DaysOfCode*** -->
           </div>
         </div>
       </section>
