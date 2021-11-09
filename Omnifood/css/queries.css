@@ -353,6 +353,20 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
   }
 }
 
+/* *** Start of Day 37 #100DaysOfCode*** */
+/**************************/
+/* BELOW 336px (Phones) */
+/**************************/
+/* ! max-width: 21em => 21em * 16px (the defaut font size of the browser) = 336px ! */
+
+@media (max-width: 21em) {
+  .margin-right-sm {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+}
+/* *** End of Day 37 #100DaysOfCode*** */
+
 /**************************/
 /* Fixing Safari flexbox gap */
 /**************************/
