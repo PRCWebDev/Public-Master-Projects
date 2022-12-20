@@ -1,4 +1,3 @@
-/* ***Start of Day 26 #100DaysOfCode*** */
 .container {
   /* 1140px */
   max-width: 120rem;
@@ -78,9 +77,7 @@
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
-/* ***End of Day 26 #100DaysOfCode*** */
 
-/* ***Start of Day 25 #100DaysOfCode*** */
 /**************************/
 /* HEADER SECTION */
 /**************************/
@@ -147,9 +144,7 @@
   */
   background-color: #cf711f;
 }
-/* ***End of Day 25 #100DaysOfCode*** */
 
-/* ***Start of Day 34 #100DaysOfCode*** */
 /* Building the MOBILE NAVIGATION */
 .btn-mobile-nav {
   border: none;
@@ -166,16 +161,14 @@
 }
 
 /* Selecting the name="close-outline" ATTRIBUTE by using [] like this (with the class for higher specificity) */
-.icon-mobile-nav[name="close-outline"] {
+.icon-mobile-nav[name='close-outline'] {
   display: none;
 }
 /* or like this, but with a lower specificity
 [name="close-outline"] {
   display: none;
 } */
-/* ***End of Day 34 #100DaysOfCode*** */
 
-/* ***Start of Day 35 #100DaysOfCode*** */
 /* STICKY NAVIGATION */
 .sticky .header {
   /* the element is taken OUT of the normal flow of the page when using position: fixed, just like when using position: absolute */
@@ -194,9 +187,7 @@
 .sticky .section-hero {
   margin-top: 9.6rem;
 }
-/* ***End of Day 35 #100DaysOfCode*** */
 
-/* ***Start of Day 22 #100DaysOfCode*** */
 /**************************/
 /* HERO SECTION */
 /**************************/
@@ -258,9 +249,7 @@
 .hero-img {
   width: 100%;
 }
-/* ***End of Day 22 #100DaysOfCode*** */
 
-/* ***Start of Day 27 #100DaysOfCode*** */
 /**************************/
 /* FEATURED IN SECTION */
 /**************************/
@@ -288,9 +277,7 @@
   filter: brightness(0);
   opacity: 50%;
 }
-/* ***End of Day 27 #100DaysOfCode*** */
 
-/* ***Start of Day 26 #100DaysOfCode*** */
 /**************************/
 /* HOW IT WORKS SECTION */
 /**************************/
@@ -320,7 +307,7 @@
 
 .step-img-box::before,
 .step-img-box::after {
-  content: "";
+  content: '';
   display: block;
   border-radius: 50%;
   position: absolute;
@@ -352,9 +339,7 @@
   width: 35%;
   /* z-index: 10; */
 }
-/* ***End of Day 26 #100DaysOfCode*** */
 
-/* ***Start of Day 28 #100DaysOfCode*** */
 /**************************/
 /* MEALS & DIETS SECTION */
 /**************************/
@@ -442,9 +427,7 @@
   text-align: center;
   font-size: 1.8rem;
 }
-/* ***End of Day 28 #100DaysOfCode*** */
 
-/* ***Start of Day 29 #100DaysOfCode*** */
 /**************************/
 /* TESTIMONIALS SECTION */
 /**************************/
@@ -533,7 +516,7 @@
 }
 
 .pricing-plan--complete::after {
-  content: "Best value";
+  content: 'Best value';
   position: absolute;
   top: 6%;
   right: -18%;
@@ -612,9 +595,7 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
-/* ***End of Day 29 #100DaysOfCode*** */
 
-/* ***Start of Day 30 #100DaysOfCode*** */
 /**************************/
 /* CTA SECTION */
 /**************************/
@@ -663,7 +644,7 @@
       rgba(235, 151, 78, 0.35),
       rgba(230, 125, 34, 0.35)
     ),
-    url("../img/eating.jpg");
+    url('../img/eating.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -780,20 +761,3 @@
 .footer-link:active {
   color: #555;
 }
-/* ***End of Day 30 #100DaysOfCode*** */
-
-/* ***Start of Day 35 #100DaysOfCode*** */
-/**************************/
-/* CREDIT SECTION */
-/**************************/
-.container.credit {
-  padding: 1rem;
-  text-align: center;
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #cf711f;
-  text-transform: uppercase;
-  letter-spacing: 0.75px;
-}
-/* ***End of Day 35 #100DaysOfCode*** */

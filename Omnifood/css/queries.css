@@ -1,7 +1,5 @@
-/* *** Start of Day 33 #100DaysOfCode*** */
-
-/* !!! VERY IMPORTANT:
-
+/* 
+!!! VERY IMPORTANT:
 When setting up Media Queries, we must take into account that REM and EM do NOT depend on the html font size we originally set:
 font-size = 10px = 10px / 16px = 0.625 = 62.5%
 (
@@ -10,14 +8,13 @@ font-size = 10px = 10px / 16px = 0.625 = 62.5%
 }
 )
 
-Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!! 
+Instead, 1rem = 1em = 16px (the default font size of the browser)!!! 
 */
 
 /**************************/
 /* BELOW 1344px (Smaller desktops) */
 /**************************/
-/* ! max-width: 84em => 84em * 16px (the defaut font size of the browser) = 1344px ! */
-
+/* ! max-width: 84em => 84em * 16px (the default font size of the browser) = 1344px ! */
 @media (max-width: 84em) {
   .hero {
     max-width: 120rem;
@@ -36,8 +33,7 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
 /**************************/
 /* BELOW 1200px (Landscape Tablets) */
 /**************************/
-/* ! max-width: 75em => 75em * 16px (the defaut font size of the browser) = 1200px ! */
-
+/* ! max-width: 75em => 75em * 16px (the default font size of the browser) = 1200px ! */
 @media (max-width: 75em) {
   html {
     /* 9px / 16px = 0.5625 = 56.25%  */
@@ -81,14 +77,11 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
     padding: 9.6rem 3.2rem;
   }
 }
-/* *** End of Day 33 #100DaysOfCode*** */
 
-/* *** Start of Day 34 #100DaysOfCode*** */
 /**************************/
 /* BELOW 944px (Tablets) */
 /**************************/
-/* ! max-width: 59em => 59em * 16px (the defaut font size of the browser) = 944px ! */
-
+/* ! max-width: 59em => 59em * 16px (the default font size of the browser) = 944px ! */
 @media (max-width: 59em) {
   html {
     /* 8px / 16px = 0.5 = 50% */
@@ -209,12 +202,12 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
   }
 
   /* Reveals the Mobile Navigation Menu CLOSE X button  */
-  .nav-open .icon-mobile-nav[name="close-outline"] {
+  .nav-open .icon-mobile-nav[name='close-outline'] {
     display: block;
   }
 
   /* Hides the Mobile Navigation Menu HAMBURGER button  */
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
     display: none;
   }
 
@@ -228,14 +221,11 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
     font-size: 3rem;
   }
 }
-/* *** End of Day 34 #100DaysOfCode*** */
 
-/* *** Start of Day 35 #100DaysOfCode*** */
 /**************************/
 /* BELOW 704px (Smaller tablets) */
 /**************************/
-/* ! max-width: 44em => 44em * 16px (the defaut font size of the browser) = 704px ! */
-
+/* ! max-width: 44em => 44em * 16px (the default font size of the browser) = 704px ! */
 @media (max-width: 44em) {
   /* Transforming all the 3 & 4 columns sections / components into 2 columns */
   .grid--3-cols,
@@ -275,8 +265,7 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
 /**************************/
 /* BELOW 544px (Phones) */
 /**************************/
-/* ! max-width: 34em => 34em * 16px (the defaut font size of the browser) = 544px ! */
-
+/* ! max-width: 34em => 34em * 16px (the default font size of the browser) = 544px ! */
 @media (max-width: 34em) {
   .grid {
     row-gap: 4.8rem;
@@ -353,19 +342,16 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
   }
 }
 
-/* *** Start of Day 37 #100DaysOfCode*** */
 /**************************/
 /* BELOW 336px (Phones) */
 /**************************/
-/* ! max-width: 21em => 21em * 16px (the defaut font size of the browser) = 336px ! */
-
+/* ! max-width: 21em => 21em * 16px (the default font size of the browser) = 336px ! */
 @media (max-width: 21em) {
   .margin-right-sm {
     margin-right: 0 !important;
     margin-bottom: 1rem;
   }
 }
-/* *** End of Day 37 #100DaysOfCode*** */
 
 /**************************/
 /* Fixing Safari flexbox gap */
@@ -418,7 +404,6 @@ Instead, 1rem = 1em = 16px (the defaut font size of the browser)!!!
     margin-bottom: 4.8rem;
   }
 }
-/* *** End of Day 35 #100DaysOfCode*** */
 
 /* 
 - Font sizes (px)

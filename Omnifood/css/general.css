@@ -1,4 +1,3 @@
-/* ***Start of Day 21 #100DaysOfCode*** */
 /* 
 --- 01 TYPOGRAPHY SYSTEM
 - Font sizes (px)
@@ -73,12 +72,12 @@ html {
   /* Hides all the elements that overflow horizontally, on the X axis */
   overflow-x: hidden;
 
-  /* Smooth scrolling ONE LINE CSS instead of using JS - DOES NOT WORK ON SAFARI BROWSER - WE NEED TO WRITE JAVASCRIPT FOR SMOOTH SCROOLING ON SAFARI BROWSER */
+  /* Smooth scrolling ONE LINE CSS instead of using JS - DOES NOT WORK ON SAFARI BROWSER - WE NEED TO WRITE JAVASCRIPT FOR SMOOTH SCROLLING ON SAFARI BROWSER */
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -87,9 +86,7 @@ body {
   /* Only works if there is nothing Absolutely Positioned in relation to body */
   overflow-x: hidden;
 }
-/* ***End of Day 21 #100DaysOfCode*** */
 
-/* ***Start of Day 22 #100DaysOfCode*** */
 /**************************/
 /* GENERAL REUSABLE COMPONENTS */
 /**************************/
@@ -151,7 +148,6 @@ body {
   /* Trick to add border inside without making the layout jump */
   box-shadow: inset 0 0 0 3px #fff;
 }
-/* ***End of Day 22 #100DaysOfCode*** */
 
 .btn--form {
   background-color: #45260a;
